@@ -12,9 +12,9 @@ function calcola() {
 
     // Calcoli
     var costoRollover = bonus * rollover * (1 - rtp);
-    var targetMedio = bonus * (rollover / 2);
-    var targetBuono = bonus * (rollover / 1.5);
-    var targetAlto = bonus * rollover;
+    var targetMedio = bonus * rollover * (1 - rtp);
+    var targetBuono = bonus * rollover * (1 - rtp) * 0.7;
+    var targetAlto = bonus * rollover * (1 - rtp) * 0.9;
 
     // Mostra i risultati
     document.getElementById("costoRollover").innerHTML = "Il Rollover ti costerà statisticamente: €" + costoRollover.toFixed(2);
