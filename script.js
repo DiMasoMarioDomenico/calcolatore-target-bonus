@@ -10,11 +10,13 @@ function calcola() {
         return;
     }
 
-    // Calcoli
+    // Calcolo del costo statistico del rollover
     var costoRollover = bonus * rollover * (1 - rtp);
-    var targetMedio = bonus * rollover * (1 - rtp);
-    var targetBuono = bonus * rollover * (1 - rtp) * 0.7;
-    var targetAlto = bonus * rollover * (1 - rtp) * 0.9;
+
+    // Calcoli dei target
+    var targetMedio = costoRollover * 1.65;
+    var targetBuono = costoRollover * 2.5;
+    var targetAlto = costoRollover * 3.5;
 
     // Mostra i risultati
     document.getElementById("costoRollover").innerHTML = "Il Rollover ti costerà statisticamente: €" + costoRollover.toFixed(2);
