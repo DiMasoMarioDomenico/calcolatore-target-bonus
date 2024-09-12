@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Bonus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcolatore Bonus</h1>
+        <div class="input-group">
+            <label for="bonus">Importo Bonus (€):</label>
+            <input type="number" id="bonus" placeholder="Inserisci importo bonus">
+        </div>
+        <div class="input-group">
+            <label for="rollover">Rollover (es: 20x):</label>
+            <input type="number" id="rollover" placeholder="Inserisci rollover">
+        </div>
+        <div class="input-group">
+            <label for="rtp">RTP della slot (%):</label>
+            <input type="number" id="rtp" placeholder="Inserisci RTP della slot">
+        </div>
+        <button onclick="calcola()">Calcola</button>
+        
+        <div id="result">
+            <h2>Risultati:</h2>
+            <p id="costoRollover">Il Rollover ti costerà statisticamente: </p>
+            <p id="targetMedio">Target con medie probabilità di completare il rollover: </p>
+            <p id="targetBuono">Target con buone probabilità di completare il rollover: </p>
+            <p id="targetAlto">Target con alte probabilità di completare il rollover: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
